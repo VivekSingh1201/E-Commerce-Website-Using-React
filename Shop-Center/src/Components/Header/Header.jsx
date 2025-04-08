@@ -1,10 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ShoppingCart } from "lucide-react";
+import { ShoppingCart, Menu } from "lucide-react";
 
 const Header = () => {
   return (
     <header className="bg-white shadow-md py-4 px-6 flex justify-between items-center sticky top-0 z-50">
+      {/* Category */}
+
+      <Link
+        to="/"
+        className="sm:hidden block text-gray-700 font-medium hover:text-indigo-600"
+      >
+        <Menu className="w-6 h-6" />
+      </Link>
+
       {/* Logo */}
       <Link to="/" className="text-2xl font-bold text-indigo-600">
         ShopCenter

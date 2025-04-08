@@ -1,20 +1,20 @@
 import React from 'react';
-import { Star, StarHalf } from "lucide-react";
+import { Star, StarHalf, Heart } from "lucide-react";
 
 const ProductCard = ({
-    image="https://m.media-amazon.com/images/I/61giwQtR1qL._AC_UY327_FMwebp_QL65_.jpg",
-    platform="Amazon",
-    title="Iphone 16 Pro Max (1 TB) - Desert Titanium",
-    rating=2.5,
-    prevPrice="₹200000",
-    currPrice="₹174000",
-    prevPriceDate="6-Apr-2025",
-    dropAmount="₹26000",
-    lastUpdated="30 minutes ago",
-    date="6-Apr-2025",
-  }) => {
+  image = "https://m.media-amazon.com/images/I/61giwQtR1qL._AC_UY327_FMwebp_QL65_.jpg",
+  platform = "Amazon",
+  title = "Iphone 16 Pro Max (1 TB) - Desert Titanium",
+  rating = 2.5,
+  prevPrice = "₹200000",
+  currPrice = "₹174000",
+  prevPriceDate = "6-Apr-2025",
+  dropAmount = "₹26000",
+  lastUpdated = "30 minutes ago",
+  date = "6-Apr-2025",
+}) => {
   return (
-    <div className="w-full max-w-sm bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border">
+    <div className="w-full max-w-xlg bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border">
       {/* Image Section */}
       <div className="relative">
         <img
@@ -23,8 +23,12 @@ const ProductCard = ({
           className="w-full h-64 object-contain p-4"
         />
         {/* Platform Badge */}
-        <div className="absolute top-2 right-2 bg-yellow-400 text-black text-xs font-semibold px-2 py-1 rounded-md">
-          {platform}
+        <div className="absolute top-2 left-2 bg-white p-1 rounded-md shadow z-10">
+          <img src={`/${platform.toLowerCase()}.jpeg`} alt="Amazon" className="w-6 h-6 object-contain" />
+        </div>
+        {/* Platform Badge */}
+        <div className="absolute top-2 right-2  text-black text-xs font-semibold px-2 py-1 rounded-md">
+          <Heart className="w-6 h-6" />
         </div>
         {/* Price Drop Badge */}
         <div className="absolute bottom-2 left-2 bg-green-600 text-white text-xs px-2 py-1 rounded-md">
